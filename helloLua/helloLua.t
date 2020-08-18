@@ -6,15 +6,15 @@ Unit = {
 }
 
 Unit.State.Name = ""
-Unit.State.PackageName = "com.sy.ydcs.samsung"
+Unit.State.PackageName = "com.sy.ydcs.samsung"   -- APP的名称
 
 
 -- [状态机函数]
 function ProcessState(processState, processStateTable, processStateParam) 
-    TestGame()
-	if  processState[processStateTable] ~= nil then
+    TestGame()  --启动游戏检测机制
+	if  processState[processStateTable] ~= nil then 
         
-		return processState[processStateTable](processStateParam) ;
+		return processState[processStateTable](processStateParam) ;   -- Task 全部放在 table 中
     end
     return "Error"
 end
@@ -31,6 +31,9 @@ function floatwinrun()
     end
 end 
 
+
+
+-- 测试任务
 Unit.Param.Test = {
 	account = editgettext("text1")
     ,id = 1
@@ -61,7 +64,7 @@ function Unit.State.Task(list)
 end
 
 
--- 启动游戏
+-- 启动游戏状态
 function TestGame()
     if XM.Timer("TestGameTiner") then
 		local name = gettopapppackagenameex()
