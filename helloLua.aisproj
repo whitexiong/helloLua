@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<Project>
+<ProjInfo>
+<EnterFile>helloLua.t</EnterFile>
+<Language>1</Language>
+<Version>2.2.3</Version>
+<ExeIco/>
+<Platform>android</Platform>
+<PackageName>com.ais.whitehame</PackageName>
+<AppName>helloLua</AppName>
+</ProjInfo>
+</Project>
